@@ -1,0 +1,768 @@
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('2988661327514615445', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20180103020022)
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `string` varchar(255), `password_digest` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180103020022')[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-01-03 02:00:52', '2018-01-03 02:00:52')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2988661327514615445')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/" for 10.240.1.203 at 2018-01-03 02:38:26 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_flash_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 532ms (Views: 522.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.1.15 at 2018-01-03 02:38:32 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  Rendered toppages/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 104ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 10.240.1.203 at 2018-01-03 02:38:34 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/workspace/monolist/app/controllers/users_controller.rb:26: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:26: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.6ms)
+Started GET "/signup" for 10.240.0.41 at 2018-01-03 02:39:17 +0000
+Cannot render console from 10.240.0.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 151ms (Views: 137.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/signup" for 10.240.1.8 at 2018-01-03 03:38:48 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_navbar.html.erb (2.6ms)
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 25.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.240.1.206 at 2018-01-03 03:38:49 +0000
+Cannot render console from 10.240.1.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered toppages/index.html.erb within layouts/application (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 10.240.1.206 at 2018-01-03 03:38:51 +0000
+Cannot render console from 10.240.1.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_navbar.html.erb (43.5ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/signup" for 10.240.0.41 at 2018-01-03 03:39:29 +0000
+Cannot render console from 10.240.0.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 144ms (Views: 142.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 10.240.1.8 at 2018-01-03 03:39:46 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PSVlH+w2HL1GmBQ7tr0P6bPjyZGrA2lkin/t2KvEf1goTKwMxLNgwKwvKrZamtdVdg6apbU/+OrBZLWQXIJeAg==", "user"=>{"name"=>"suzuki", "email"=>"suzuki@suzuki.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"登録する"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'suzuki@suzuki.com' LIMIT 1[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[32mINSERT INTO `users` (`name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES ('suzuki', 'suzuki@suzuki.com', '$2a$10$tzqy1cdqj1h6SrPnq9Td2.4n919Gw6NwNsCMt048OvQMYdLRQODi.', '2018-01-03 03:39:46', '2018-01-03 03:39:46')[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://techacademy-ryuji0212.c9users.io:8080/users/1
+Completed 302 Found in 100ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/users/1" for 10.240.1.8 at 2018-01-03 03:39:46 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Redirected to http://techacademy-ryuji0212.c9users.io:8080/login
+Filter chain halted as :require_user_logged_in rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 10.240.1.203 at 2018-01-03 03:39:47 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 10.240.1.15 at 2018-01-03 03:39:49 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Vdb0/iVhqtcmMncf74eKyx9vFssPKh9EcLm9kTFHv7sPpLA0BD61rYv91GTmcaX6ZDvbzIAOfNa2b6+s4M/pA==", "session"=>{"email"=>"suzuki@suzuki.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'suzuki@suzuki.com' LIMIT 1[0m
+Redirected to http://techacademy-ryuji0212.c9users.io:8080/users/1
+Completed 302 Found in 74ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 10.240.1.203 at 2018-01-03 03:39:49 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+LoadError (library not found for class Digest::MDS -- digest/mds):
+  
+app/helpers/users_helper.rb:3:in `gravatar_url'
+app/views/users/show.html.erb:3:in `_app_views_users_show_html_erb___3562338573310478360_70330310995780'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.9ms)
+Started GET "/users/1" for 10.240.1.8 at 2018-01-03 03:41:17 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 169ms (Views: 152.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.240.0.69 at 2018-01-03 03:41:21 +0000
+Cannot render console from 10.240.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered toppages/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 112ms (Views: 110.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 10.240.1.8 at 2018-01-03 03:41:25 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 132ms (Views: 129.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 10.240.1.8 at 2018-01-03 03:41:27 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_flash_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 10.240.1.8 at 2018-01-03 03:42:05 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c6wd7SYwh6AmwtU0NjuS6TGm9pD70G2LszQ7pCi4FU9mxdT+DrX73cx167naHEpV9EulpOXs/AX4L2Ps3/40FQ=="}
+Redirected to http://techacademy-ryuji0212.c9users.io:8080/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.240.1.203 at 2018-01-03 03:42:06 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered toppages/index.html.erb within layouts/application (10.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.7ms)
+  Rendered layouts/_flash_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/login" for 10.240.1.203 at 2018-01-03 03:42:07 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_flash_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 10.240.1.206 at 2018-01-03 03:42:15 +0000
+Cannot render console from 10.240.1.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (11.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.5ms)
+Started GET "/users" for 10.240.1.8 at 2018-01-03 03:42:15 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.1ms)
+Started GET "/users/1" for 10.240.1.203 at 2018-01-03 03:42:19 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Redirected to http://techacademy-ryuji0212.c9users.io:8080/login
+Filter chain halted as :require_user_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 10.240.0.69 at 2018-01-03 03:42:19 +0000
+Cannot render console from 10.240.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.240.0.41 at 2018-01-03 03:42:22 +0000
+Cannot render console from 10.240.0.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered toppages/index.html.erb within layouts/application (2.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.7ms)
+  Rendered layouts/_flash_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 183ms (Views: 181.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('2988661327514615445', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateItems (20180103042247)
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE `items` (`id` int AUTO_INCREMENT PRIMARY KEY, `code` varchar(255), `name` varchar(255), `url` varchar(255), `image_url` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180103042247')[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('2988661327514615445')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `items`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'items'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/" for 10.240.0.236 at 2018-01-03 04:43:17 +0000
+Cannot render console from 10.240.0.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered toppages/index.html.erb within layouts/application (10.7ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m  [["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 132ms (Views: 129.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/signup" for 10.240.1.203 at 2018-01-03 04:43:19 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_navbar.html.erb (10.8ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 203ms (Views: 195.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/login" for 10.240.0.41 at 2018-01-03 04:43:21 +0000
+Cannot render console from 10.240.0.41! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  Rendered layouts/_navbar.html.erb (2.4ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for 10.240.1.203 at 2018-01-03 04:43:23 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mQV4gqMmUVLvjRHUTlZmu4p5+9W12ATrPpcuSnsM4L5AXdFxMP25gEtKBSdzaW1wa1kZVpd3Hy9R8sufD3c/JQ==", "session"=>{"email"=>"suzuki@suzuki.com", "password"=>"[FILTERED]"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'suzuki@suzuki.com' LIMIT 1[0m
+Redirected to http://techacademy-ryuji0212.c9users.io:8080/users/1
+Completed 302 Found in 73ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 10.240.0.236 at 2018-01-03 04:43:23 +0000
+Cannot render console from 10.240.0.236! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.240.1.203 at 2018-01-03 04:43:25 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ToppagesController#index as HTML
+  Rendering toppages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered toppages/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/new" for 10.240.1.206 at 2018-01-03 04:43:26 +0000
+Cannot render console from 10.240.1.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/workspace/monolist/app/controllers/items_controller.rb:38: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/items_controller.rb:38: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+Started GET "/items/new" for 10.240.1.15 at 2018-01-03 04:48:35 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  
+SyntaxError (/home/ubuntu/workspace/monolist/app/controllers/items_controller.rb:39: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/items_controller.rb:39: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.6ms)
+Started GET "/items/new" for 10.240.0.69 at 2018-01-03 04:49:38 +0000
+Cannot render console from 10.240.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/ubuntu/workspace/monolist/app/controllers/items_controller.rb:38: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/items_controller.rb:38: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.0ms)
+Started GET "/items/new" for 10.240.1.203 at 2018-01-03 04:50:22 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_items, application/_items with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/monolist/app/views"
+):
+    11:   </div>
+    12: </div>
+    13: 
+    14: <% render 'items', items: @items %>
+  
+app/views/items/new.html.erb:14:in `_app_views_items_new_html_erb___1894989687098761563_15642880'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.0ms)
+Started GET "/items/new" for 10.240.0.69 at 2018-01-03 04:51:26 +0000
+Cannot render console from 10.240.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_items, application/_items with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/monolist/app/views"
+):
+    11:   </div>
+    12: </div>
+    13: 
+    14: <%= render 'items', items: @items %>
+  
+app/views/items/new.html.erb:14:in `_app_views_items_new_html_erb___1894989687098761563_69939851652880'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.6ms)
+Started GET "/items/new" for 10.240.1.8 at 2018-01-03 04:51:57 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_items, application/_items with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/monolist/app/views"
+):
+    11:   </div>
+    12: </div>
+    13: 
+    14: <%= render 'items', items: @items %>
+  
+app/views/items/new.html.erb:14:in `_app_views_items_new_html_erb___1894989687098761563_26894440'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.7ms)
+Started GET "/items/new" for 10.240.1.8 at 2018-01-03 04:54:02 +0000
+Cannot render console from 10.240.1.8! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_items, application/_items with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/monolist/app/views"
+):
+    11:   </div>
+    12: </div>
+    13: 
+    14: <%= render 'items', items: @items %>
+  
+app/views/items/new.html.erb:14:in `_app_views_items_new_html_erb___1894989687098761563_69939818318840'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.6ms)
+Started GET "/items/new" for 10.240.0.69 at 2018-01-03 04:58:32 +0000
+Cannot render console from 10.240.0.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_items.html.erb (0.5ms)
+  Rendered items/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 343ms (Views: 340.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/new?utf8=%E2%9C%93&keyword=tets&commit=%E5%95%86%E5%93%81%E3%82%92%E6%A4%9C%E7%B4%A2" for 10.240.1.15 at 2018-01-03 04:58:35 +0000
+Cannot render console from 10.240.1.15! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"tets", "commit"=>"商品を検索"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 297ms (ActiveRecord: 0.2ms)
+
+
+  
+ArgumentError (Unknown validator: 'LenghtValidator'):
+  
+app/models/item.rb:5:in `<class:Item>'
+app/models/item.rb:1:in `<top (required)>'
+app/controllers/items_controller.rb:16:in `block in new'
+app/controllers/items_controller.rb:15:in `new'
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.4.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.4ms)
+Started GET "/items/new" for 10.240.1.203 at 2018-01-03 04:59:08 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_items.html.erb (0.4ms)
+  Rendered items/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 119ms (Views: 106.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/items/new?utf8=%E2%9C%93&keyword=&commit=%E5%95%86%E5%93%81%E3%82%92%E6%A4%9C%E7%B4%A2" for 10.240.1.203 at 2018-01-03 04:59:09 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"", "commit"=>"商品を検索"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_items.html.erb (0.5ms)
+  Rendered items/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (123.0ms)
+  Rendered layouts/_flash_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 145ms (Views: 142.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/new?utf8=%E2%9C%93&keyword=tse&commit=%E5%95%86%E5%93%81%E3%82%92%E6%A4%9C%E7%B4%A2" for 10.240.1.203 at 2018-01-03 04:59:11 +0000
+Cannot render console from 10.240.1.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"tse", "commit"=>"商品を検索"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'jism:11506325' AND `items`.`name` = 'B008TSE-18-270キャノン タムロン 18-270mm F/3.5-6.3 Di II VC PZD(Model：B008TS)※キヤノンマウント ※Di II シリーズ （APS-Cサイズ用) [B008TSE18270キノン]【返品種別A】【送料無料】' AND `items`.`url` = 'http://item.rakuten.co.jp/jism/4960371006215-34-20506-n/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/jism/cabinet/0576/4960371006215.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'mapcamera:10841443' AND `items`.`name` = '《新品》 TAMRON (タムロン) 18-270mm F3.5-6.3 DiII VC PZD TS B008TSE（キヤノン用）[ Lens | 交換レンズ ] 【KK9N0D18P】' AND `items`.`url` = 'http://item.rakuten.co.jp/mapcamera/4960371006215/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/mapcamera/cabinet/new_045/4960371006215_1.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'jism:11392702' AND `items`.`name` = 'TS-E1076 パイオニア 10cm2ウェイスピーカー車載用（2個1組） carrozzeria(カロッツェリア) [TSE1076]【返品種別A】【送料無料】' AND `items`.`url` = 'http://item.rakuten.co.jp/jism/4977729666007-37-34337-n/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/jism/cabinet/0480/4977729666007.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'edion:10384057' AND `items`.`name` = '【送料無料】ツインバード ノンフライオーブン オリジナル ブラック TSE120B [TSE120B]【RNH】' AND `items`.`url` = 'http://item.rakuten.co.jp/edion/4975058405335/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/edion/cabinet/goods/ll/img_144/4975058405335_ll.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'cityliner:10205923' AND `items`.`name` = 'モメンティブジャパン(旧GE東芝) RTVシリコーン接着シールTSE397TSE397W 1本(100g)' AND `items`.`url` = 'http://item.rakuten.co.jp/cityliner/9180342/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/cityliner/cabinet/0204/09180342.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'jism:10721647' AND `items`.`name` = 'TS-E17MMF4L キヤノン TS-E 17mm F4L ※TS-Eレンズ [TSE17MMF4L]【返品種別A】【送料無料】' AND `items`.`url` = 'http://item.rakuten.co.jp/jism/4960999635156-34-20507-n/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/jism/cabinet/0153/4960999635156.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'tuzukiya:10080710' AND `items`.`name` = 'トラスコ N2タッピングスプレーエコ生分解性 N2TSE' AND `items`.`url` = 'http://item.rakuten.co.jp/tuzukiya/t25-13514/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/tuzukiya/cabinet/main/t25-2/t25-13514.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'dennzai:10005591' AND `items`.`name` = '年末年始ポイント5倍還元セール！三菱電機TSE-1DA 電子式 停電補償付タイマー a接点AC250V8A' AND `items`.`url` = 'http://item.rakuten.co.jp/dennzai/10005438/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/dennzai/cabinet/03827720/04062638/imgrc0063376521.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'e-westcoast:10016499' AND `items`.`name` = 'PRO TRUST(プロトラスト)　TRIPLE STEP EGI(エギングステップエギ)　TSE-832G　251cm　062320　エギングロッド【あす楽_土曜営業】【あす楽_日曜営業】【あす楽_年中無休】【送料無料(北海道・沖縄除く)】' AND `items`.`url` = 'http://item.rakuten.co.jp/e-westcoast/3101-protrust-a-049/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/e-westcoast/cabinet/m/triple-g-1.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'book:18818131' AND `items`.`name` = '2000系TSE 特急宇和海 往復 4K撮影作品 世界初の振子式気動車の走りを4Kで往復記録!【Blu-ray】 [ (鉄道) ]' AND `items`.`url` = 'http://item.rakuten.co.jp/book/15170988/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4537/4932323674537.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'dennzai:10005594' AND `items`.`name` = '年末年始ポイント5倍還元セール！三菱電機TSE-2DB 電子式 停電補償付タイマーc接点AC250V15A' AND `items`.`url` = 'http://item.rakuten.co.jp/dennzai/10005441/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/dennzai/cabinet/03827720/04062638/10005440_2.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'dennzai:10005593' AND `items`.`name` = '年末年始ポイント5倍還元セール！三菱電機TSE-2DB 電子式 停電補償付タイマーc接点AC250V8A' AND `items`.`url` = 'http://item.rakuten.co.jp/dennzai/10005440/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/dennzai/cabinet/03827720/04062638/10005440_2.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'denkiti:10013946' AND `items`.`name` = '日立IH調理器用のグリル用の焼網HT-C10TFS、HT-C10TS、HT-C10TSE、HT-C10TWFS、HT-C10TWS、HT-C10TWSE、HT-C20TFS、HT-C20TS、HT-C20TWFS、HT-C20TWS等用★1枚【HITACHI HT-C20TWS052】' AND `items`.`url` = 'http://item.rakuten.co.jp/denkiti/ht-c20tws052/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/denkiti/cabinet/hitachi/imgrc0065682453.gif' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'dennzai:10005592' AND `items`.`name` = '年末年始ポイント5倍還元セール！三菱電機TSE-1SA 電子式 停電補償付タイマー a接点AC250V8A' AND `items`.`url` = 'http://item.rakuten.co.jp/dennzai/10005439/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/dennzai/cabinet/03827720/04062638/imgrc0063376521.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'jism:11506324' AND `items`.`name` = 'まごころ長期修理保証(保証5年)［加入料：対象商品代金の5%］商品「B008TSE-18-270キャノン」専用加入料(※加入料のみ注文不可)' AND `items`.`url` = 'http://item.rakuten.co.jp/jism/4960371006215-34-20506-n-w3/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/jism/cabinet/service/mw03.gif' LIMIT 1[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'denkiti:10017099' AND `items`.`name` = '【在庫あり！】日立IH調理器用のグリル網CHC3H5S、CHC3H5W、CHC3T1W、HT-B10TFS、HT-B10TS、HT-B10TSE、HT-B10TWFS、HT-B10TWFSE、HT-B10TWS、HT-B10TWSE等用★1枚【HITACHI HT-B10TS005】' AND `items`.`url` = 'http://item.rakuten.co.jp/denkiti/ht-b10ts005/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/denkiti/cabinet/hitachi/imgrc0065682452.gif' LIMIT 1[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'altmond:10025011' AND `items`.`name` = '【90％OFF】【あす楽】TSE【セイ】【レディース】カシミヤ100％の透かし編み半袖クルーネックニット・セーター/ローズ/ブルー【サイズXS/S/M】' AND `items`.`url` = 'http://item.rakuten.co.jp/altmond/say-r-6sl2/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/altmond/cabinet/00865677/imgrc0068247899.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'showkado:10000835' AND `items`.`name` = '有田焼 太白赤線梅むすび 銘々皿 15cm 田清窯 tse0178' AND `items`.`url` = 'http://item.rakuten.co.jp/showkado/tse0178/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/showkado/cabinet/product06/tse0178-001.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'cityliner:10018290' AND `items`.`name` = 'モメンティブジャパン(旧GE東芝) 電気・電子用RTVシリコーン接着シールTSE392TSE392C 350g 1本(333mL)' AND `items`.`url` = 'http://item.rakuten.co.jp/cityliner/8214726/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/cityliner/cabinet/0034/08214726.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'showkado:10000839' AND `items`.`name` = '有田焼 太白むすび 銘々皿2個セット(赤線/呉須線) 15.5cm 田清窯 tse0174' AND `items`.`url` = 'http://item.rakuten.co.jp/showkado/tse0174/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/showkado/cabinet/product06/tse0174-001.jpg' LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_items.html.erb (0.7ms)
+  Rendered items/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 320ms (Views: 21.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/items/new?utf8=%E2%9C%93&keyword=&commit=%E5%95%86%E5%93%81%E3%82%92%E6%A4%9C%E7%B4%A2" for 10.240.1.206 at 2018-01-03 05:03:27 +0000
+Cannot render console from 10.240.1.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"", "commit"=>"商品を検索"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_items.html.erb (0.6ms)
+  Rendered items/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_flash_messages.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 141ms (Views: 138.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/items/new?utf8=%E2%9C%93&keyword=%E6%BC%AB%E7%94%BB&commit=%E5%95%86%E5%93%81%E3%82%92%E6%A4%9C%E7%B4%A2" for 10.240.1.206 at 2018-01-03 05:03:32 +0000
+Cannot render console from 10.240.1.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#new as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"漫画", "commit"=>"商品を検索"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'book:18739074' AND `items`.`name` = '漫画　君たちはどう生きるか [ 吉野源三郎 ]' AND `items`.`url` = 'http://item.rakuten.co.jp/book/15096110/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/9470/9784838729470.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'book:18832249' AND `items`.`name` = '【幻の江戸城天守クリスタルアートつき】新版 学習まんが 日本の歴史 発刊記念特別定価 全20巻セット （集英社版学習まんが）' AND `items`.`url` = 'http://item.rakuten.co.jp/book/15186053/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/9139/9784082399139.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'rack-kan:10006986' AND `items`.`name` = '[12時〜全品P10倍]【コミック 漫画 収納ケース】 送料無料 ≪おトクな9個セット！≫コミック本ストッカー CMS-23×9＜幅23.2×奥行45.4×高さ14.8cm＞ 家具 アイリスオーヤマ' AND `items`.`url` = 'http://item.rakuten.co.jp/rack-kan/796000/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/rack-kan/cabinet/img61832895.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'e-kitchen:10005934' AND `items`.`name` = '【3個セット】コミック本ストッカ- CMS-23×3[収納ケース/コミック本/漫画本/マンガ/コミック収納]' AND `items`.`url` = 'http://item.rakuten.co.jp/e-kitchen/242827/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/e-kitchen/cabinet/jisyahin2/242827.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'bookoffonline:12280806' AND `items`.`name` = '【中古】 マンガでやさしくわかるNLPコミュニケーション ／山崎啓支【著】，サノマリナ【作画】 【中古】afb' AND `items`.`url` = 'http://item.rakuten.co.jp/bookoffonline/0016959734/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/bookoffonline/cabinet/359/0016959734l.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'dotkae-ru:10152566' AND `items`.`name` = 'アイシー　アイシー　漫画原稿用紙　B4　110KG' AND `items`.`url` = 'http://item.rakuten.co.jp/dotkae-ru/2000000059436/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/dotkae-ru/cabinet/item/t_img/b000/no_image.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'hankos:10034112' AND `items`.`name` = 'マンガの印鑑 漫画のはんこ【FUNCO（ファンコ）】「まんがずかん」セルフインクスタンプ（ふきだし用）【ご奉仕品】' AND `items`.`url` = 'http://item.rakuten.co.jp/hankos/mangazukan_jointy9/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/hankos/cabinet/mangazukan/pc/item_jointyj9.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'furuhon-kaitori-honpo:10010977' AND `items`.`name` = '【漫画】【中古】スプラウト　＜1〜7巻完結＞　南波あつこ【あす楽対応】 【全巻セット】' AND `items`.`url` = 'http://item.rakuten.co.jp/furuhon-kaitori-honpo/10010977/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/furuhon-kaitori-honpo/cabinet/c02-0276.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'stock-square:10043653' AND `items`.`name` = '伊勢藤　漫画 本　収納ケース 収納ボックス フタ付き　ブックス ナチュラル　文庫本 コミック誌' AND `items`.`url` = 'http://item.rakuten.co.jp/stock-square/4966149179334/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/stock-square/cabinet/plus/4966149179334.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'book:18178075' AND `items`.`name` = '学研まんがNEW日本の歴史　成績アップ4大特典付14巻セット （学研まんがNEW日本の歴史） [ 大石 学 ]' AND `items`.`url` = 'http://item.rakuten.co.jp/book/14433091/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4193/9784058114193.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'kaguemon:10011359' AND `items`.`name` = '【年末年始特別クーポン！さらにポイント2倍】本棚 薄型 スリム オシャレ 大容量 HF-1860 書棚 本収納 木製 幅60 奥行17/22 高さ180 おしゃれ ラック 文庫本 60 文庫用 収納 棚 書架 書庫 コミック 子供 部屋 白 ホワイト 黒 ブラック 漫画 180 sale AW-S1' AND `items`.`url` = 'http://item.rakuten.co.jp/kaguemon/sn-s-1860/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/kaguemon/cabinet/p20171227/sn-s-1860_top.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'tees-factory:10019229' AND `items`.`name` = 'ブックカバー「SION」【名入れ 日本製 おしゃれ 文庫 新書 コミック 四六判 B6 A5 漫画 単行本 ほぼ日手帳 2018 フリーサイズ 革 御朱印帳 カバー 手帳カバー かわいい 刺繍】【送料無料 ギフト プチギフト プレゼント 北欧 雑貨】' AND `items`.`url` = 'http://item.rakuten.co.jp/tees-factory/sion_b_main/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/tees-factory/cabinet/n/sion/sion_main2.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'gekiyasukaguya:10014044' AND `items`.`name` = '【 640円引き 】チェスト 押入れ収納 木製 すきまラック CD DVD ラック 隙間収納 ボックス ワゴン 整理 本棚 書棚 キャスター付き シェルフ ダークブラウン ホワイト 白 クローゼット おしゃれ 棚 押し入れ収納 マンガ ウォールナット スリム 薄型 3段 可動' AND `items`.`url` = 'http://item.rakuten.co.jp/gekiyasukaguya/lcb642217b/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/gekiyasukaguya/cabinet/living2/z091111c1410g.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'kagustyle:10000662' AND `items`.`name` = 'スライド本棚 幅120cm スライド3列 奥深 CPB-9012SL スライド書棚 スライドブックシェルフ コミック収納 マンガ収納 カラーボックス 【送料無料】 山善/YAMAZEN/ヤマゼン' AND `items`.`url` = 'http://item.rakuten.co.jp/kagustyle/1457429/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/kagustyle/cabinet/mail_w/171226/k_12_xd534.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'book:18300164' AND `items`.`name` = '学研まんが　NEW世界の歴史　別巻2冊付き　全14巻 [ 近藤二郎 ]' AND `items`.`url` = 'http://item.rakuten.co.jp/book/14594911/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/4322/9784058114322.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'gekiyasukaguya:10000295' AND `items`.`name` = '【 980円引き 】ラック 本棚 扉付き キッズ 薄型 収納 本収納 ガラス扉 書棚 CDラック DVDラック 省スペース ディスプレイ スライド 扉 木製 シェルフ ホワイト 白 ブラック 黒 ダークブラウン おしゃれ 可動 子ども 子供部屋 幅106cm 漫画 大容量 文庫' AND `items`.`url` = 'http://item.rakuten.co.jp/gekiyasukaguya/avr0026/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/gekiyasukaguya/cabinet/living4/z081201z2401.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'jajan-r:10000067' AND `items`.`name` = '■薄型つっぱり書棚■ 天井つっぱり書棚 愛書家 本収納のQ極 本好き＆漫画好き専用本棚 奥行き17cm 薄型本棚 基本送料無料 スリム本棚 薄型大容量突っ張り本棚 転倒防止 設置ラクラク完成品お届け 完成品本棚 本収納 コミック収納 壁面収納 【★JAJAN SPU★】' AND `items`.`url` = 'http://item.rakuten.co.jp/jajan-r/357719/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/jajan-r/cabinet/sina/ch601701.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'rack-kan:10092297' AND `items`.`name` = '本棚 大容量 スライド 幅120 コミックラック スライドラック送料無料 スライド式 スライド棚3つ トリプル 可動棚 書棚 奥深 ブックラック 本収納 整理棚 収納ラック シェルフ フリーラック マガジンラック 文庫本 漫画 ウォルナット ビーチ ホワイト CST-1200【D】' AND `items`.`url` = 'http://item.rakuten.co.jp/rack-kan/7069508/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/rack-kan/cabinet/tasya30/7069508.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'auc-qualial:10005871' AND `items`.`name` = '【完成品】回転ラック 【Pivot ピボット】ハイタイプ 7段 高さ167cm（コミック収納 本収納 CD収納 マンガ収納 漫画 回転本棚 ディスプレイ本棚 スリムラック コミックラック リビング 回転式 本棚 回転 白 ホワイト ツートン ブラウン）' AND `items`.`url` = 'http://item.rakuten.co.jp/auc-qualial/q6070/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/auc-qualial/cabinet/rack/q6070.jpg' LIMIT 1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  `items`.* FROM `items` WHERE `items`.`code` = 'hobbytoy:10070914' AND `items`.`name` = '≪9個セット≫コミック本ストッカー 9個セット CMS-23ジャンプコミックサイズ〜B6青年誌コミック対応サイズ積み重ねできる マンガ収納ケース 漫画収納ボックス コミック収納ケース 全巻セット収納 アイリスオーヤマ 【送料無料】' AND `items`.`url` = 'http://item.rakuten.co.jp/hobbytoy/1242827/' AND `items`.`image_url` = 'http://thumbnail.image.rakuten.co.jp/@0_mall/hobbytoy/cabinet/jishahin5/1242827_01.jpg' LIMIT 1[0m
+  Rendering items/new.html.erb within layouts/application
+  Rendered items/_items.html.erb (0.8ms)
+  Rendered items/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 306ms (Views: 24.0ms | ActiveRecord: 5.9ms)
+
+
